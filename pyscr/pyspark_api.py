@@ -31,8 +31,8 @@ df = df[['date', 'conversion_rate']]
 listdf = spark.createDataFrame(df)
 
 # Print PySpark DataFrame
-print(listdf.show())
-print(listdf.printSchema())
+# print(listdf.show())
+# print(listdf.printSchema())
 listdf = listdf.withColumn("date" , listdf.date.cast(DateType()))
 
 # Print PySpark DataFrame after convert datetime to date
@@ -40,7 +40,7 @@ print('-'*100)
 print('Conversion Rate')
 print('-'*100)
 
-print(listdf.show())
+print(listdf.show(5))
 print(listdf.printSchema())
 
 spark.stop()
