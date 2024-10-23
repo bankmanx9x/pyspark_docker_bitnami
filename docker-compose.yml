@@ -30,12 +30,12 @@ services:
       - SPARK_SSL_ENABLED=no
       - SPARK_USER=spark
 
-spark:
+  pg_database:
     image: postgres:12.6
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres
     ports:
-      - '5433:5432'
+      - '5439:5432'
     volumes:
       - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/postgres_vol:/var/lib/postgresql/data
