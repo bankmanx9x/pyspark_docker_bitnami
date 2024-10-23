@@ -14,8 +14,8 @@ services:
       - '8085:8080'
       - '7077:7077'
     volumes:
-      - /home/dbt_lab/test_pyspark/pyscr:/opt/bitnami/spark/pyscr
-      - /home/dbt_lab/test_pyspark/.env:/opt/bitnami/spark/.env
+      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/pyscr:/opt/bitnami/spark/pyscr
+      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/.env:/opt/bitnami/spark/.env
 
   spark-worker:
     build: .
@@ -38,5 +38,4 @@ spark:
     ports:
       - '5433:5432'
     volumes:
-      - /home/dbt_lab/bitnami_spark/pyscr:/opt/bitnami/spark/pyscr
-      - /home/dbt_lab/bitnami_spark/.env:/opt/bitnami/spark/.env
+      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/postgres_vol:/var/lib/postgresql/data
