@@ -13,7 +13,7 @@ sqlContext = SparkSession(spark)
 spark.sparkContext.setLogLevel("ERROR")
 .config('spark.jars.packages', 'org.postgresql:postgresql:42.5.4')\
 """
-
+# read value from .env file
 load_dotenv()
 PGSQL_host = os.environ['PGSQL_host']
 PGSQL_port = os.environ['PGSQL_port']
