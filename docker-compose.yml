@@ -3,6 +3,7 @@ version: '3.7'
 services:
   spark:
     build: .
+    container_name: spark_master
     environment:
       - SPARK_MODE=master
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
@@ -19,6 +20,7 @@ services:
 
   spark-worker:
     build: .
+    container_name: spark_worker
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
@@ -32,6 +34,7 @@ services:
 
   pg_database:
     image: postgres:12.6
+    container_name: spark_pg
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres
