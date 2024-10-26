@@ -22,7 +22,6 @@ services:
       - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/pyscr:/opt/bitnami/spark/pyscr
       - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/.env:/opt/bitnami/spark/.env
       - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/csv:/opt/bitnami/spark/csv
-      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/sparkwarehouse:/opt/bitnami/spark/sparkwarehouse
 
   spark-worker:
     build: .
