@@ -14,6 +14,10 @@ services:
     ports:
       - '8085:8080'
       - '7077:7077'
+      - '10000:10000' # for hive beeline
+      - '10001:10001' # for hive beeline
+      - '4040:4040' # Spark web UI
+      - '4041:4041' # Spark web UI
     volumes:
       - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/pyscr:/opt/bitnami/spark/pyscr
       - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/.env:/opt/bitnami/spark/.env
@@ -21,7 +25,7 @@ services:
 
   spark-worker:
     build: .
-    container_name: spark_worker
+#    container_name: spark_worker
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
