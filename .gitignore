@@ -1,14 +1,4 @@
-pyspark_el-mysql-to-pg.py
-pyspark_el-mysql-to-hive.py
-pyspark_api-hive.py
-hive.py
-api-hive.py
-pyspark_dbt.py
-pyspark_pyhive.py
-ws2_data.py
 *.py
 # this dir for store hive table
 sparkwarehouse/*
-pyscr/*2
-
 bitnamispark.txt
