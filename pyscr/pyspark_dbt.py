@@ -2,9 +2,12 @@ from pyspark.sql import SparkSession
 from dotenv import load_dotenv
 import os
 
+# this script copy tables from thriftserver to postgresql table
+
 spark = SparkSession\
         .builder\
         .appName("Read dbt table")\
+        .enableHiveSupport() \
         .getOrCreate()
 
 load_dotenv()

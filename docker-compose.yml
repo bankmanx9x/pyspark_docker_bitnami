@@ -19,9 +19,10 @@ services:
       - '4040:4040' # Spark web UI
       - '4041:4041' # Spark web UI
     volumes:
-      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/pyscr:/opt/bitnami/spark/pyscr
-      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/.env:/opt/bitnami/spark/.env
-      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/csv:/opt/bitnami/spark/csv
+      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/pyscr:/opt/bitnami/spark/pyscr # for pyspark scipts
+      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/.env:/opt/bitnami/spark/.env # for env variables
+      - /home/dbt_lab/test_pyspark/pyspark_docker_bitnami/csv:/opt/bitnami/spark/csv # for read csv
+      #- sparkwarehouse:/opt/bitnami/spark/sparkwarehouse
 
   spark-worker:
     build: .
