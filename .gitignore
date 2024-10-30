@@ -9,6 +9,6 @@ ws2_data.py
 *.py
 # this dir for store hive table
 sparkwarehouse/*
-pyscr/*
+pyscr/*.py
 
 bitnamispark.txt
