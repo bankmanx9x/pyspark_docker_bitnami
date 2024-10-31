@@ -13,7 +13,7 @@ spark = SparkSession\
     		.getOrCreate()
 
 # Read api with requests lib to Pandas DataFrame
-url = "https://r2de2-workshop-vmftiryt6q-ts.a.run.app/usd_thb_conversion_rate"
+url = ""
 response = requests.get(url)
 
 # Convert dict from api to Pandas DataFrame
